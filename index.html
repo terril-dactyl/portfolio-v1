@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Poppins&family=Work+Sans&display=swap"> 
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Title icon -->
+    <link rel="icon" href="img/title-icon.svg">
+
+    <title>Ali Haider</title>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navMenu = document.getElementById('nav-menu');
+            const ham = document.getElementById('ham');
+            const content = document.getElementById('content');
+
+            content.addEventListener('click', () => {
+                visible = navMenu.getAttribute('toggle');
+
+                if (visible == 'true') {
+                    navMenu.setAttribute('toggle', false);
+                }
+            });
+
+            ham.addEventListener('click', () => {
+                visible = navMenu.getAttribute('toggle');
+
+                if (visible == 'false') {
+                    navMenu.setAttribute('toggle', true);
+                } else {
+                    navMenu.setAttribute('toggle', false);
+
+                }
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+
+    <!-- Splash Screen -->
+
+    <!-- Navbar -->
+    <header class="nav-header">
+        <nav class="navbar flex">
+            
+            <!-- Not sure if we need a div here -->
+            <div class="nav-logo"> 
+                <a href="/" aria-label="home">
+                    <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 42">
+                        <title>Logo</title>
+                        <path fill="currentColor" d="M27.422 27.285c.062.172.094.313.094.422.007.102-.02.18-.082.234-.063.055-.168.09-.317.106-.14.015-.332.023-.574.023-.242 0-.438-.008-.586-.023a1.486 1.486 0 0 1-.328-.047.444.444 0 0 1-.164-.117 1.197 1.197 0 0 1-.094-.176l-1.3-3.691h-6.305l-1.243 3.644a.7.7 0 0 1-.093.188.54.54 0 0 1-.176.129c-.07.03-.176.054-.317.07a4.694 4.694 0 0 1-.527.023c-.226 0-.414-.011-.562-.035-.141-.015-.243-.05-.305-.105-.055-.055-.082-.133-.082-.235.008-.11.043-.25.105-.422l5.086-14.085a.678.678 0 0 1 .117-.212.56.56 0 0 1 .223-.128c.102-.032.227-.051.375-.059a6.07 6.07 0 0 1 .586-.023c.25 0 .457.007.621.023.164.008.297.027.399.059.101.03.18.078.234.14a.566.566 0 0 1 .129.211l5.086 14.086Zm-6.527-12.434h-.012l-2.613 7.56h5.273l-2.648-7.56Z"/>
+                        <path stroke="currentColor" stroke-width="2" d="M3.813 11.077 21 1.155l17.187 9.922v19.846L21 40.845 3.813 30.923V11.077Z"/>
+                    </svg>                      
+                </a>
+            </div>
+
+            <div>
+                <svg id="ham" class="ham" viewBox="0 0 40 18" xmlns="http://www.w3.org/2000/svg">
+                    <g id="ham-menu">
+                        <g id="line-one">
+                            <line x1="1" y1="1" x2="39" y2="1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </g>
+                        <g id="line-two">
+                            <line x1="1" y1="9" x2="39" y2="9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </g>
+                        <g id="line-three">
+                            <line x1="1" y1="17" x2="39" y2="17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+
+            <div id="nav-menu" class="nav-box flex" toggle="false"> <!-- Needed div to "box-in" two elements (btn & list) to send them to right -->
+                <ul class="nav-list flex">
+                    <li><a class="nav-list-item" href="#">About</a></li>
+                    <li><a class="nav-list-item" href="#">Skills</a></li>
+                    <li><a class="nav-list-item" href="#">Experience</a></li>
+                    <li><a class="nav-list-item" href="#">Work</a></li>
+                    <li><a class="nav-list-item" href="#">Contact</a></li>
+                </ul>
+                <a class="btn resume-btn" href="#" target="_blank" aria-label="Resume">Resume</a>
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- Intro Text -->
+    <div id="content">
+        <section class="flex">
+            <div class="hero flex"><div><h1 class="t">Hi, my name is</h1></div>
+            <div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut facere impedit officiis, veniam inventore vel cum vero recusandae cupiditate excepturi necessitatibus delectus possimus animi magni ullam ipsum fugit tenetur ab pariatur sequi eveniet ipsa? Quidem aliquid neque maiores, dicta inventore obcaecati nam exercitationem illo dignissimos dolores deleniti eum nemo perferendis?</p></div>
+            <div><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa, inventore.</p></div>
+            <div><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, corporis adipisci. Ipsa nulla perspiciatis atque natus maiores voluptas repellat vitae!</p></div>
+            <div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam eos amet molestiae expedita, laboriosam animi aperiam rerum architecto dolores labore eius facere, magni voluptate dicta pariatur recusandae vero rem ipsa?</p></div></div>
+
+            <div class="heroo flex">
+                    <svg class="mini-sys" viewBox="0 0 510 488" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="Mini System" filter="url(#filter0_d_82_30)">
+                        <g id="Moon">
+                        <g id="Ellipse 1" filter="url(#filter1_ii_82_30)">
+                        <circle cx="266" cy="240" r="175" fill="#F1F1F1"/>
+                        </g>
+                        <g id="Ellipse 2" filter="url(#filter2_i_82_30)">
+                        <circle cx="365.167" cy="257.5" r="23.3333" fill="#CFCDD5"/>
+                        </g>
+                        <g id="Ellipse 5" filter="url(#filter3_i_82_30)">
+                        <circle cx="226.333" cy="119.833" r="23.3333" fill="#CFCDD5"/>
+                        </g>
+                        <g id="Ellipse 4" filter="url(#filter4_i_82_30)">
+                        <circle cx="197.167" cy="310" r="29.1667" fill="#CFCDD5"/>
+                        </g>
+                        <g id="Ellipse 3" filter="url(#filter5_i_82_30)">
+                        <circle cx="211.75" cy="239.417" r="14.5833" fill="#CFCDD5"/>
+                        </g>
+                        </g>
+                        <circle id="Ring" cx="266" cy="240" r="238.5"/>
+                        <g id="Satellite" clip-path="url(#clip0_82_30)">
+                        <g id="Group">
+                        <path id="Vector" d="M74.6012 92.498L83.6089 98.2212L101.609 69.8911L92.6015 64.1678L80.8199 75.7243L74.6012 92.498Z" fill="#B4B4B4"/>
+                        <path id="Vector_2" d="M43.7712 160.92L61.7715 132.59L52.7639 126.867L39.3535 138.15L34.7638 155.197L43.7712 160.92Z" fill="#B4B4B4"/>
+                        </g>
+                        <g id="Group_2">
+                        <path id="Vector_3" d="M74.6022 92.4966L92.6016 64.1678L83.5933 58.4443L65.594 86.773L74.6022 92.4966Z" fill="#E0E0E0"/>
+                        <path id="Vector_4" d="M52.7649 126.867L43.7583 121.145L25.7589 149.474L34.7655 155.196L52.7649 126.867Z" fill="#E0E0E0"/>
+                        </g>
+                        <g id="Group_3">
+                        <path id="Vector_5" d="M94.241 61.5878L81.9296 77.0634L68.0309 102.839L70.6113 104.479L75.5422 96.7181L84.5496 102.441L105.829 68.9503L94.241 61.5878ZM82.6681 94.0016L78.8211 91.5574L81.5424 87.2745L85.3893 89.7187L82.6681 94.0016ZM88.6684 84.5582L84.8214 82.114L87.5425 77.8313L91.3895 80.2755L88.6684 84.5582ZM90.8213 72.6706L93.5425 68.3877L97.3895 70.8319L94.6682 75.1149L90.8213 72.6706Z" fill="#424242"/>
+                        <path id="Vector_6" d="M44.7123 165.14L65.9914 131.649L56.9837 125.926L61.9146 118.166L59.3345 116.526L41.9043 140.058L33.1244 157.778L44.7123 165.14ZM53.7049 131.087L57.5519 133.531L54.8307 137.814L50.9837 135.37L53.7049 131.087ZM47.7049 140.53L51.5518 142.975L48.8306 147.257L44.9836 144.813L47.7049 140.53ZM45.552 152.418L42.8307 156.701L38.9837 154.256L41.705 149.974L45.552 152.418Z" fill="#424242"/>
+                        </g>
+                        <g id="Group_4">
+                        <path id="Vector_7" d="M82.6534 54.2251L61.3743 87.7157L70.3817 93.4388L65.4509 101.2L68.031 102.839L94.2409 61.5877L82.6534 54.2251ZM73.6606 88.2785L69.8136 85.8343L72.5349 81.5513L76.3819 83.9956L73.6606 88.2785ZM79.6606 78.835L75.8137 76.3907L78.5348 72.108L82.3817 74.5523L79.6606 78.835ZM81.8135 66.9474L84.5348 62.6644L88.3818 65.1087L85.6605 69.3916L81.8135 66.9474Z" fill="#707070"/>
+                        <path id="Vector_8" d="M51.8233 122.648L42.8157 116.925L21.5366 150.415L33.1244 157.777L59.3343 116.526L56.7542 114.887L51.8233 122.648ZM33.8231 150.978L29.9761 148.533L32.6974 144.25L36.5444 146.695L33.8231 150.978ZM39.8232 141.534L35.9762 139.09L38.6975 134.807L42.5444 137.251L39.8232 141.534ZM45.8231 132.091L41.9759 129.647L44.6971 125.364L48.5443 127.808L45.8231 132.091Z" fill="#707070"/>
+                        </g>
+                        <path id="Vector_9" d="M30.4993 100.62L65.5127 122.867C67.8002 124.32 70.5167 124.796 73.1621 124.206C75.8068 123.616 78.0636 122.032 79.517 119.745L59.4864 102.475L35.9396 92.0574L30.4993 100.62Z" fill="#A8B2D1"/>
+                        <path id="Vector_10" d="M76.3952 105.739L41.3815 83.492L35.9395 92.0574L79.5169 119.745C79.5172 119.745 79.5175 119.744 79.5178 119.744C82.518 115.022 81.1172 108.739 76.3952 105.739Z" fill="#A8B2D1"/>
+                        <path id="Vector_11" d="M83.0529 125.612L91.3875 130.907L93.026 128.329L85.4235 121.881L83.0529 125.612Z" fill="#424242"/>
+                        <path id="Vector_12" d="M93.0265 128.329L94.667 125.747L86.333 120.452L84.6925 123.033L93.0265 128.329Z" fill="#707070"/>
+                        <path id="Vector_13" d="M74.7584 125.298C75.3722 127.938 76.9775 130.18 79.2781 131.613L82.9489 133.898L88.3109 125.287L83.5101 119.624L76.0274 117.638C74.5951 119.938 74.1444 122.659 74.7584 125.298Z" fill="#8892B0"/>
+                        <path id="Vector_14" d="M90.004 114.387C87.7033 112.954 84.9825 112.503 82.3425 113.117C79.7028 113.731 77.4601 115.336 76.0276 117.637C76.0274 117.637 76.0271 117.638 76.0268 117.638L88.3106 125.287L93.6745 116.672L90.004 114.387Z" fill="#8892B0"/>
+                        <path id="Vector_15" d="M35.0297 108.526L40.1901 111.804L47.9057 99.6605L45.9945 96.5059L42.7457 96.3816L35.0297 108.526Z" fill="#424242"/>
+                        <path id="Vector_16" d="M47.9045 99.661L55.6216 87.5152L50.4613 84.2365L42.7442 96.3823L47.9045 99.661Z" fill="#707070"/>
+                        </g>
+                        </g>
+                        <defs>
+                        <filter id="filter0_d_82_30" x="0" y="0" width="510" height="488" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset dy="4"/>
+                        <feGaussianBlur stdDeviation="2"/>
+                        <feComposite in2="hardAlpha" operator="out"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_82_30"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_82_30" result="shape"/>
+                        </filter>
+                        <filter id="filter1_ii_82_30" x="87" y="61" width="360" height="358" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset dx="-10" dy="-6"/>
+                        <feGaussianBlur stdDeviation="2"/>
+                        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0.0208333 0 0 0 0 0.0208333 0 0 0 0 0.0208333 0 0 0 0.25 0"/>
+                        <feBlend mode="normal" in2="shape" result="effect1_innerShadow_82_30"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset dx="6" dy="4"/>
+                        <feGaussianBlur stdDeviation="4"/>
+                        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0.805833 0 0 0 0 0.794167 0 0 0 0 0.794167 0 0 0 1 0"/>
+                        <feBlend mode="normal" in2="effect1_innerShadow_82_30" result="effect2_innerShadow_82_30"/>
+                        </filter>
+                        <filter id="filter2_i_82_30" x="341.833" y="234.167" width="46.6667" height="50.6667" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset dy="4"/>
+                        <feGaussianBlur stdDeviation="2"/>
+                        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                        <feBlend mode="normal" in2="shape" result="effect1_innerShadow_82_30"/>
+                        </filter>
+                        <filter id="filter3_i_82_30" x="203" y="96.5" width="46.6667" height="50.6667" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset dy="4"/>
+                        <feGaussianBlur stdDeviation="2"/>
+                        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                        <feBlend mode="normal" in2="shape" result="effect1_innerShadow_82_30"/>
+                        </filter>
+                        <filter id="filter4_i_82_30" x="168" y="280.833" width="58.3333" height="62.3333" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset dy="4"/>
+                        <feGaussianBlur stdDeviation="2"/>
+                        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                        <feBlend mode="normal" in2="shape" result="effect1_innerShadow_82_30"/>
+                        </filter>
+                        <filter id="filter5_i_82_30" x="197.167" y="224.833" width="29.1667" height="33.1667" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset dy="4"/>
+                        <feGaussianBlur stdDeviation="2"/>
+                        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                        <feBlend mode="normal" in2="shape" result="effect1_innerShadow_82_30"/>
+                        </filter>
+                        <clipPath id="clip0_82_30">
+                        <rect width="100" height="100" fill="white" transform="translate(4 71.7618) rotate(-12.5692)"/>
+                        </clipPath>
+                        </defs>
+                    </svg>                   
+            </div>
+
+        </section>
+    </div>
+    
+    
+</body>
+
+</html>
