@@ -80,6 +80,32 @@ a {
   gap: var(--gap, 1rem);
 }
 
+/*
+Terrildactyl's tweaks 1
+--------------------------------
+I added a class called align-items-stretch to
+make the flexed content fill the vertical space
+of the container. This makes all the nav buttons
+as tall as the Resume button. This will allow us
+to have a background image that appears outside
+of the anchor's natural box model.
+
+This will also need to be applied to each level
+from the nav container down to the list items.
+
+Finally. on the LI level, we need to vertically
+center the anchors, since the default is to align
+to the top in a flexed container.
+*/
+.flex-align-stretch {
+  align-items: stretch;
+}
+
+.flex-align-center {
+  align-items: center;
+}
+/* End tweaks 1 */
+
 .container {
   width: 100%;
   margin: 0 auto;
@@ -145,6 +171,7 @@ a {
 }
 
 /* Hover effect doing the underline from left-in (on hover) to right-out (off hover) */
+/*
 .nav-list-item {
   position: relative;
   font-size: var(--fs-sm);
@@ -176,6 +203,37 @@ a {
   transform: scaleX(1);
   transform-origin: left;
 }
+*/
+
+/* Terrildactyl's tweaks 
+
+1. Set up basic colors for default anf :hover states.
+2. Figure out how to create a gradient that simulates a 1px underline.
+   (Normally, I build everything off the 1rem size, so that all other
+   sizes inherit from the root font size. That way if the user cahnges
+   the root font size, the UI will scale accordingly.)
+   I'm going to do a  four stop gradient: transparent/hover color/hover color/transparent.
+   This will give us nice sharp edges, instead of a gradient fade. The real art here will
+   be finding the correct locations for the two hover color stops. Should be about
+   4 pixels below the baseline of the ancor text.
+
+*/
+.nav-list-item {
+  background-image: linear-gradient(0deg, rgba(100,218,255,0) 3%, rgba(100,218,255,1) 3%, rgba(100,218,255,1) 8%, rgba(100,218,255,0) 8%);
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  color: #CCD6F6;
+  padding: .25rem;
+  transition: none;
+}
+
+.nav-list-item:hover {
+  background-size: 100% 100%;
+  color: #64DAFF;
+  transition: all .25s ease-out;
+}
+
+
 
 .resume-btn:hover {
   background-color: var(--blue-tint);
