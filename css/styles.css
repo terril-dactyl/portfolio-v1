@@ -250,7 +250,27 @@ to the top in a flexed container.
     justify-content: center;
     border-radius: 10px;
     transform: translateX(100%);
-    transition: transform 200ms ease-in;
+
+    /*
+    -------------------------
+    Terrildactyl's note:
+    -------------------------
+    The below transition property is firing as soon as the
+    media query becomes true. (i.e. the browser is
+    768px or less, so let's slide the menu off to the right.)
+    That results in the phantom slide-out animation you're seeing.
+
+    Switching it off lets the menu instantly move off canvas
+    when the media query applies. Then when you toggle the menu
+    button the transition property from that rule applies, giving
+    a nice slide-in effect on open.
+
+    To add the slide-out effect on close, and avoid the phantom animation,
+    you'll have to use JS to add the CSS transition property after the menu
+    opens, then remove it after the closing slide completes.
+    */
+
+    /*transition: transform 200ms ease-in;*/
     background-color: var(--light-violet);
   }
 
